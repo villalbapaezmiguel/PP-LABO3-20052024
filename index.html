@@ -1,11 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcial</title>
+    <title>ABM de Cryptos</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav class="navegacion">
+            <a href="#" class="enlace">Nosotros</a>
+            <a href="#" class="enlace">Anuncios</a>
+            <a href="#" class="enlace">Blog</a>
+            <a href="#" class="enlace">Contacto</a>
+        </nav>
+        <div class="contender-Titulo">
+            <h1>Administrador de monedas</h1>
+        </div>
+    </header>
+
+    <form id="miFormulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="simbolo">Símbolo:</label>
+        <input type="text" id="simbolo" name="simbolo" required>
+
+        <label for="fechaCreacion">Fecha de Creación:</label>
+        <input type="date" id="fechaCreacion" name="fechaCreacion" required>
+
+        <label for="precioActual">Precio Actual:</label>
+        <input type="number" id="precioActual" name="precioActual" required>
+
+        <label for="tipoConsenso">Tipo de Consenso:</label>
+        <select id="tipoConsenso" name="tipoConsenso">
+            <option value="pow">Proof of Work</option>
+            <option value="pos">Proof of Stake</option>
+        </select>
+
+        <label for="algoritmo">Algoritmo:</label>
+        <select id="algoritmo" name="algoritmo">
+            <option value="sha256">SHA-256</option>
+            <option value="ethash">Ethash</option>
+            <option value="scrypt">Scrypt</option>
+            <option value="x11">X11</option>
+        </select>
+
+        <button type="submit" id="agregar">Agregar Cripto</button>
+        <button type="button" id="cancelar">Cancelar</button>
+    </form>
+
+    <div id="spinner" class="spinner">
+        <img src="img/logo.svg" alt="Cargando">
+    </div>
+
+    <section id="tabla-cryptos">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Símbolo</th>
+                    <th>Fecha de Creación</th>
+                    <th>Precio Actual</th>
+                    <th>Tipo de Consenso</th>
+                    <th>Algoritmo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <nav class="navegacion">
+            <a href="#" class="enlace">Nosotros</a>
+            <a href="#" class="enlace">Anuncios</a>
+            <a href="#" class="enlace">Blog</a>
+            <a href="#" class="enlace">Contacto</a>
+        </nav>
+        <h2>Todos los derechos reservados 2024</h2>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
 </body>
+
 </html>
